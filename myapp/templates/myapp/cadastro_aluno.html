@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="POST">
+	{% csrf_token %}
+	<label>Nome:</label>
+	<input type="text" name="nome" value="{{aluno.nome}}"><br/>
+	<label>Email:</label>
+	<input type="text" name="email" value="{{aluno.email}}"><br/>
+	<label>Sexo:</label>
+	<select name="sexo">
+		<option value=""> --------- </option>
+		<option value="M">Masculino</option>
+		<option value="F">Feminino</option>
+	</select><br/>
+	<label>Rua:</label>
+	<input type="text" name="rua" value="{{endereco.rua}}"><br/>
+	<input type="submit" value="Cadastrar">
+</form>
+</body>
+</html>

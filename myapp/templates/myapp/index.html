@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Hello World</h1>
+<a href="{% url 'django.contrib.auth.views.logout' %}">Sair</a>
+{% for aluno in alunos %}
+	<p>{{aluno.id_aluno.nome}} - {{aluno.rua}} - <a href="{% url 'edita_aluno' pk=aluno.pk %}">Editar</a> - <a href="{% url 'remove_aluno' pk=aluno.pk %}">Remover</a></p>
+{% endfor %}
+</body>
+</html>
